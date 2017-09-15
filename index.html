@@ -1,9 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Pre-compiled tec</title>
-</head>
-<body>
+	<meta charset="utf-8">
+	<title>Lincoln Inc</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/light.css">
+	<link rel="stylesheet" href="css/nightmode.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="row">
+		<button data-switch-contrast aria-hidden class="lightdark">Night mode</button>
+	    <div class="column column-30 col-site-title"><a href="#" class="websitename">Lincoln Inc</a></div>	
+		</div>
+	</div>
+	<div class="row">
+		<div id="sidebar" class="column">
+		<div class="column column-30 col-site-title"><a href="#" class="site-title">Lincoln Inc</a></div>
+			<ul>
+				<li><a href="#">Dashboard</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#members">Members</a></li>
+				<li><a href="#contacts">Contacts</a></li>
+				
+			</ul>
+		</div>
+		<section id="main-content" class="column column-offset-20">
+			<div class="row grid-responsive">
+				<div class="column page-heading">
+					<div class="large-card">
+						<h1>Welcome to the Dashboard</h1>
+						<p class="text-large">This is some insights into the various projects and member of the team.</p>
+					</div>
+				</div>
+			</div>
+      
+					<div class="card shadow">
+						<div class="card-title">
+							<h2>Project Intake</h2>
+						</div>
+						<div class="card-block">
+							<div class="canvas-wrapper">
+								<canvas class="chart" id="line-chart" height="auto" width="auto"></canvas>
+							</div>
+						</div>
+					</div>
+   
+
+			
+				<div class="column">
+					<div class="card shadow">
+						<div class="card-title">
+							<h2 class="float-left">Projects</h2><a class="anchor" name="projects"></a>
+				
+							<div class="clearfix"></div>
+						</div>
+						<div class="card-block progress-bars">
+							<h5 class="float-left mt-1">Redesign for Beer brand</h5>
+							<p class="float-right text-small text-muted mt-1">50%</p>
+							<div class="clearfix"></div>
+							<div class="progress-bar">
+								<div class="progress background-primary" style="width: 50%;"></div>
+							</div>
+							<h5 class="float-left mt-1">Personal Rebrand</h5>
+							<p class="float-right text-small text-muted mt-1">50%</p>
+							<div class="clearfix"></div>
+							<div class="progress-bar">
+								<div class="progress background-primary" style="width: 50%;"></div>
+							</div>
+							<h5 class="float-left mt-1">Interal design rework</h5>
+							<p class="float-right text-small text-muted mt-1">75%</p>
+							<div class="clearfix"></div>
+							<div class="progress-bar">
+								<div class="progress background-primary" style="width: 75%;"></div>
+							</div>
+							<h5 class="float-left mt-1">Cats and Dogs website</h5>
+							<p class="float-right text-small text-muted mt-1">100%</p>
+							<div class="clearfix"></div>
+							<div class="progress-bar">
+								<div class="progress background-primary" style="width: 100%;"></div>
+							</div>
+							<h5 class="float-left mt-1">Interal design rework v2</h5>
+							<p class="float-right text-small text-muted mt-1">75%</p>
+							<div class="clearfix"></div>
+							<div class="progress-bar">
+								<div class="progress background-primary" style="width: 75%;"></div>
+							</div>
+						  <h5 class="float-left mt-1">Interal design rework</h5>
+							<p class="float-right text-small text-muted mt-1">75%</p>
+							<div class="clearfix"></div>
+							<div class="progress-bar">
+								<div class="progress background-primary" style="width: 75%;"></div>
+							</div>
+							<h5 class="float-left mt-1">Brand New website</h5>
+							<p class="float-right text-small text-muted mt-1">100%</p>
+							<div class="clearfix"></div>
+							<div class="progress-bar">
+								<div class="progress background-primary" style="width: 100%;"></div>
+							</div>
+							<h5 class="float-left mt-1">Interal design rework v5</h5>
+							<p class="float-right text-small text-muted mt-1">75%</p>
+							<div class="clearfix"></div>
+							<div class="progress-bar">
+								<div class="progress background-primary" style="width: 75%;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			
+
+               <div class="column">
+					<div class="card shadow">
+						<div class="card-title">
+							<h2 class="float-left">Artists</h2><a class="anchor" name="members"></a>
+						</div>
+						<div class="card-block">
+							<table>
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Role</th>
+										<th>Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>John Doe</td>
+										<td>UI Developer</td>
+										<td>Cape Town, RSA</td>
+									</tr>
+									<tr>
+										<td>John Petter</td>
+										<td>Fine Artist</td>
+										<td>Cape Town, RSA</td>
+									</tr>
+									<tr>
+										<td>Joseph Doe</td>
+										<td>Graphic Designer</td>
+										<td>Cape Town, RSA</td>
+									</tr>
+									<tr>
+										<td>Mario Doe</td>
+										<td>Illustrator</td>
+										<td>Cape Town, RSA</td>
+									</tr>
+									<tr>
+										<td>John Doe</td>
+										<td>UI Developer</td>
+										<td>Joburg, RSA</td>
+									</tr>
+									<tr>
+										<td>John Petter</td>
+										<td>Fine Artist</td>
+										<td>Joburg, RSA</td>
+									</tr>
+									<tr>
+										<td>Joseph Doe</td>
+										<td>Graphic Designer</td>
+										<td>Joburg, RSA</td>
+									</tr>
+									<tr>
+										<td>Mario Doe</td>
+										<td>Illustrator</td>
+										<td>Joburg, RSA</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+               <div class="column">
+					<div class="card shadow">
+						<div class="card-title">
+							<h2 class="float-left">Contact</h2><a class="anchor" name="contact"></a>
+							<div class="clearfix"></div>
+						</div>
+       
+<!-- A TMEPLATE TABLE-->
+
+   <div>
+
+<div id="app" class="container">
+  <form id="search">
+    Search
+    <input class="form-control" name="query" v-model="searchQuery">
+  </form>
+  <table class="table">
+    <thead v-draggable="columns">
+      <template v-for="column in columns">          
+        <th is="table-head" :column="column" :sort="sort" v-on:sortcolumn="sortCol" ></th>
+      </template>
+    </thead>
+    <tbody>
+      <tr is="row-person" v-for="(person,index) in filteredData" :key="person" :person="person" :columns="columns">
+      </tr>
+    </tbody>
+  </table>
+</div>
+   
+    </div>
+
+ </div>
+
+<!-- THE END OF THE TEMPLATE TABLE--> 
+
+
+    </section>
+  </div>
+
+<!--  VENDOR JAVASCRIPT -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+<script src='https://unpkg.com/sortablejs@1.4.2'></script>
+<script src='https://use.fontawesome.com/a112fe1b1b.js'></script>
+
+
+  <!--  MY JAVASCRIPT -->
+    <script src="js/table.js"></script>		
+	<script src="js/switch.js"></script>		
+	<script src="js/chart-data.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script>
+	window.onload = function () {
+		var chart1 = document.getElementById("line-chart").getContext("2d");
+		window.myLine = new Chart(chart1).Line(lineChartData, {
+		responsive: true,
+		scaleLineColor: "rgba(0,0,0,.2)",
+		scaleGridLineColor: "rgba(0,0,0,.05)",
+		scaleFontColor: "#c5c7cc"
+		});
+	};
+	</script>	
 </body>
-</html>
+  
+</html> 

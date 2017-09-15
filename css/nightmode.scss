@@ -1,0 +1,99 @@
+/*
+______________________________________
+______________________________________
+
+DARK THEME
+______________________________________
+______________________________________
+*/
+
+
+.nightmode{
+  --color-page-background-light: #000;
+  --color-darkgrey-light: #333;
+  --color-lightgrey-light: #6b6b6b;
+  --color-bright-light: #d34836;
+  --color-border-light: #000;
+  --color-shadow-light: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background: var(--color-page-background-light);
+  color: var(--color-lightgrey-light);
+}
+
+* {
+  transition: all .2s ease-in;
+}
+
+h5, h6 {
+  color: var(--color-darkgrey-light);
+}
+
+h6 {
+  color: var(--color-lightgrey-light);
+}
+
+a {
+  color: var(--color-lightgrey-light);
+}
+
+a:focus, a:hover {
+  color: var(--color-bright-light);
+}
+
+
+hr {
+  border-top: 0.1rem solid var(--color-border-light);
+}
+
+td, th {
+  border-bottom: 0.1rem solid var(--color-border-light);
+}
+
+.navbar {
+  background: var(--color-page-background-light);
+  box-shadow: 0px 3px 8px var(--color-shadow-light); }
+
+  .navbar a.site-title {
+    color: var(--color-page-background-light);
+}
+
+
+.shadow{
+  box-shadow: var(--color-shadow-light);
+}
+
+#sidebar {
+  background: var(--color-page-background-light);
+  box-shadow: var(--color-shadow-light);
+}
+
+#sidebar ul li a:hover {
+      color: var(--color-bright-light);
+}
+
+.large-card {
+  background: var(--color-page-background-light);
+  box-shadow: var(--color-shadow-light);
+}
+
+.background-primary {
+  background: #666; }
+
+.progress-bar {
+  background: var(--color-page-background-light);
+}
+
+[data-switch-contrast] {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary-light);
+  color: var(--color-primary-light);
+  border-radius: 50%;
+}
+
