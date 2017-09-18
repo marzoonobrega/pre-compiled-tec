@@ -5,8 +5,8 @@
 	<title>Lincoln Inc</title>
 	
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/light.css">
-	<link rel="stylesheet" href="css/nightmode.css">
+
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 	<!--[if lt IE 9]>
@@ -15,20 +15,27 @@
 </head>
 
 <body>
+	<div id="interface">
+ 
+
+ <link rel="stylesheet" v-bind:href="current_template.value">
+
+
 	<div class="navbar">
 		<div class="row">
-		<button data-switch-contrast aria-hidden class="lightdark">Night mode</button>
 	    <div class="column column-30 col-site-title"><a href="#" class="websitename">Lincoln Inc</a></div>	
 		</div>
 	</div>
 	<div class="row">
 		<div id="sidebar" class="column">
-		<div class="column column-30 col-site-title"><a href="#" class="site-title">Lincoln Inc</a></div>
 			<ul>
 				<li><a href="#">Dashboard</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#members">Members</a></li>
 				<li><a href="#contacts">Contacts</a></li>
+				      <template v-for="template in templates">
+        <button v-on:click="setTemplate(template.id)">{{ template.name }}</button>
+      </template>
 				
 			</ul>
 		</div>
@@ -37,12 +44,15 @@
 				<div class="column page-heading">
 					<div class="large-card">
 						<h1>Welcome to the Dashboard</h1>
-						<p class="text-large">This is some insights into the various projects and member of the team.</p>
+						<p class="text-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum odio quis nisi sollicitudin tempor. Suspendisse quis nulla at neque eleifend aliquet. Curabitur in efficitur ante, non hendrerit mauris. Etiam id dolor ac neque tempor finibus. Maecenas bibendum, quam vel tincidunt vehicula, orci leo scelerisque nibh, tempus pharetra diam magna at justo. Phasellus euismod tortor dapibus nulla fermentum, id pharetra metus tempor. Nam condimentum odio orci.</p>
 					</div>
 				</div>
 			</div>
+
+
+			<div id="app" class="container">
       
-					<div class="card shadow">
+					<div class="card large-card">
 						<div class="card-title">
 							<h2>Project Intake</h2>
 						</div>
@@ -53,10 +63,8 @@
 						</div>
 					</div>
    
-
-			
 				<div class="column">
-					<div class="card shadow">
+					<div class="card large-card">
 						<div class="card-title">
 							<h2 class="float-left">Projects</h2><a class="anchor" name="projects"></a>
 				
@@ -114,75 +122,12 @@
 						</div>
 					</div>
 				</div>
-			
-			
 
+               <div class="card large-card">
                <div class="column">
-					<div class="card shadow">
+					
 						<div class="card-title">
-							<h2 class="float-left">Artists</h2><a class="anchor" name="members"></a>
-						</div>
-						<div class="card-block">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Role</th>
-										<th>Location</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>John Doe</td>
-										<td>UI Developer</td>
-										<td>Cape Town, RSA</td>
-									</tr>
-									<tr>
-										<td>John Petter</td>
-										<td>Fine Artist</td>
-										<td>Cape Town, RSA</td>
-									</tr>
-									<tr>
-										<td>Joseph Doe</td>
-										<td>Graphic Designer</td>
-										<td>Cape Town, RSA</td>
-									</tr>
-									<tr>
-										<td>Mario Doe</td>
-										<td>Illustrator</td>
-										<td>Cape Town, RSA</td>
-									</tr>
-									<tr>
-										<td>John Doe</td>
-										<td>UI Developer</td>
-										<td>Joburg, RSA</td>
-									</tr>
-									<tr>
-										<td>John Petter</td>
-										<td>Fine Artist</td>
-										<td>Joburg, RSA</td>
-									</tr>
-									<tr>
-										<td>Joseph Doe</td>
-										<td>Graphic Designer</td>
-										<td>Joburg, RSA</td>
-									</tr>
-									<tr>
-										<td>Mario Doe</td>
-										<td>Illustrator</td>
-										<td>Joburg, RSA</td>
-									</tr>
-
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-               <div class="column">
-					<div class="card shadow">
-						<div class="card-title">
-							<h2 class="float-left">Contact</h2><a class="anchor" name="contact"></a>
+							<h2 class="float-left">Artists</h2><a class="anchor" name="contact"></a>
 							<div class="clearfix"></div>
 						</div>
        
@@ -190,11 +135,8 @@
 
    <div>
 
-<div id="app" class="container">
-  <form id="search">
-    Search
-    <input class="form-control" name="query" v-model="searchQuery">
-  </form>
+
+  
   <table class="table">
     <thead v-draggable="columns">
       <template v-for="column in columns">          
@@ -206,6 +148,10 @@
       </tr>
     </tbody>
   </table>
+  <form id="search">
+    Search
+    <input class="form-control" name="query" v-model="searchQuery">
+  </form>
 </div>
    
     </div>
@@ -213,20 +159,20 @@
  </div>
 
 <!-- THE END OF THE TEMPLATE TABLE--> 
-
-
     </section>
   </div>
-
+</div>
 <!--  VENDOR JAVASCRIPT -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
 <script src='https://unpkg.com/sortablejs@1.4.2'></script>
 <script src='https://use.fontawesome.com/a112fe1b1b.js'></script>
+    <script src="https://unpkg.com/vue"></script>
+
 
 
   <!--  MY JAVASCRIPT -->
     <script src="js/table.js"></script>		
-	<script src="js/switch.js"></script>		
+	<script src="js/application.js"></script>		
 	<script src="js/chart-data.js"></script>
 	<script src="js/chart.min.js"></script>
 	<script>

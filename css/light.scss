@@ -7,88 +7,85 @@ ______________________________________
 ______________________________________
 */
 
-body{
-  --color-page-background-light: #FFF;
-  --color-darkgrey-light: #333;
-  --color-lightgrey-light: #6b6b6b;
-  --color-bright-light: #d34836;
-  --color-border-light: #f4f5f6;
-  --color-shadow-light: rgba(0, 0, 0, 0.05);
-}
+  $color-page-background-dark: #FFF;
+  $color-darkgrey-dark: #333;
+  $color-lightgrey-dark: #6b6b6b;
+  $color-bright-dark: #d34836;
+  $color-border-dark: #f4f5f6;
+  $color-shadow-dark: rgba(0, 0, 0, 0.08);
+
 
 body {
-  background: var(--color-page-background-light);
-  color: var(--color-lightgrey-light);
+  background: $color-page-background-dark;
+  color: $color-lightgrey-dark;
 }
 
 * {
   transition: all .2s ease-in;
 }
 
-h5, h6 {
-  color: var(--color-darkgrey-light);
+h1 {
+  color: color-bright-dark;
+}
+
+h5 {
+  color: $color-darkgrey-dark;
 }
 
 h6 {
-  color: var(--color-lightgrey-light);
+  color: $color-lightgrey-dark;
 }
 
 a {
-  color: var(--color-lightgrey-light);
+  color: $color-lightgrey-dark;
 }
 
 a:focus, a:hover {
-  color: var(--color-bright-light);
+  color: color-bright-dark;
 }
 
 
 hr {
-  border-top: 0.1rem solid var(--color-border-light);
+  border-top: 0.1rem solid color-bright-dark;
 }
 
 td, th {
-  border-bottom: 0.1rem solid var(--color-border-light);
+  border-bottom: 0.1rem solid $color-border-dark;
 }
 
 .navbar {
-  background: var(--color-page-background-light);
-  box-shadow: 0px 3px 8px var(--color-shadow-light); }
+  background: $color-page-background-dark;
+  box-shadow: 0px 3px 8px $color-shadow-dark; }
 
   .navbar a.site-title {
-    color: var(--color-page-background-light);
+    color: $color-page-background-dark;
 }
 
 
 .shadow{
-  box-shadow: var(--color-shadow-light);
+  box-shadow: $color-shadow-dark;
 }
 
 #sidebar {
-  background: var(--color-page-background-light);
-  box-shadow: var(--color-shadow-light);
+  background: $color-page-background-dark;
+  box-shadow: 0px 3px 8px $color-shadow-dark; 
 }
 
 #sidebar ul li a:hover {
-      color: var(--color-bright-light);
+      color: $color-bright-dark;
 }
 
 .large-card {
-  background: var(--color-page-background-light);
-  box-shadow: var(--color-shadow-light);
+  background: $color-page-background-dark;
+  box-shadow: $color-shadow-dark;
 }
 
 .background-primary {
   background: #666; }
 
 .progress-bar {
-  background: var(--color-page-background-light);
+  background: $color-page-background-dark;
 }
-
-.websitename{
-  font-size: 30px;
-  padding-left: 18px;
-}
-
 
 [data-switch-contrast] {
   position: fixed;
@@ -96,8 +93,15 @@ td, th {
   top: 2rem;
   height: 3rem;
   width: 3rem;
-  background-color: var(--color-primary-dark);
-  border: 1px solid var(--color-primary-light);
-  color: var(--color-primary-light);
+  background-color: $color-page-background-dark; 
+  border: 1px solid $color-lightgrey-dark;
+  color: $color-page-background-dark;
   border-radius: 50%;
 }
+
+form input{
+  background: $color-page-background-dark;
+  color: $color-lightgrey-dark;
+  border: none;
+}
+

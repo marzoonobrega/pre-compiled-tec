@@ -1,4 +1,3 @@
-
 var users = [];
 var templates = [
   { id: 1, name: 'Dark', value: 'css/nightmode.css'},
@@ -19,5 +18,5 @@ var app = new Vue({
 
       this.current_template = selected_template;
     }
- 
-	
+  }
+});

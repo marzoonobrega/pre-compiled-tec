@@ -1,0 +1,51 @@
+$loading-image: '../img/loading.gif';
+
+
+body {
+  background-size: cover;
+  background-position: center;
+
+  #pre-loader {
+    display: none;
+  }
+}
+
+body.loading {
+  overflow: hidden !important;
+
+  #pre-loader {
+    display: block;
+  }
+}
+
+div {
+  padding-top: 50% - 50%;
+}
+
+
+#pre-loader {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  position: absolute;
+  background: url($loading-image) center no-repeat;
+}
+
+#landing-page-video {
+  width: 100%;
+  height: 100%;
+}
+
+ul#main-menu {
+  transition: all .2s ease-in;
+
+  .on-landing-page {
+    top: auto;
+    bottom: 0;
+    position: absolute;
+    background-color: transparent;
+  }
+}
+
+

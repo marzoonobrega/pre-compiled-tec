@@ -4,13 +4,6 @@ Vue.directive("draggable", {
     Sortable.create(el, {
       draggable: ".draggable",
       onEnd: function(e) {
-        /* vnode.context is the context vue instance: "This is not documented as it's not encouraged to manipulate the vm from directives in Vue 2.0 - instead, directives should be used for low-level DOM manipulation, and higher-level stuff should be solved with components instead. But you can do this if some usecase needs this. */
-        // fixme: can this be reworked to use a component?
-        // https://github.com/vuejs/vue/issues/4065
-        // https://forum.vuejs.org/t/how-can-i-access-the-vm-from-a-custom-directive-in-2-0/2548/3
-        // https://github.com/vuejs/vue/issues/2873 "directive interface change"
-        // `binding.expression` should be the name of your array from vm.data
-        // set the expression like v-draggable="items"
         var clonedItems = a.context[binding.expression].filter(function(item) {
           return item;
         });
@@ -83,6 +76,36 @@ var people = [
     firstName: "Brian",
     lastName: "Rogers",
     email: "brogers@example.com",
+  },
+  {
+    id: 4,
+    firstName: "John",
+    lastName: "Doe",
+    email: "jdoe@example.com",
+  },
+   {
+    id: 5,
+    firstName: "Debbie",
+    lastName: "Doe",
+    email: "jdoe@example.com",
+  },
+  {
+    id: 6,
+    firstName: "Sam",
+    lastName: "Smith",
+    email: "jsmith@example.com",
+  },
+  {
+    id: 7,
+    firstName: "Brig",
+    lastName: "Rogers",
+    email: "brogers@example.com",
+  },
+  {
+    id: 8,
+    firstName: "Jacob",
+    lastName: "Doe",
+    email: "jdoe@example.com",
   }
 ];
 
@@ -99,18 +122,14 @@ var app = new Vue({
       var column = data.column;
       if (!column.sortable) return;
 
-      //respond to click vs set from settings
       if (data.event) {
-        //change sort order
         if (this.sort.on === column.id) {
-          //change sort order
           if (this.sort.direction === "desc" || !this.sort.direction) {
             this.sort.direction = "asc";
           } else {
             this.sort.direction = "desc";
           }
         } else {
-          //change sort column, default to asc
           this.sort.on = column.id;
           this.sort.direction = "asc";
           this.sort.type = column.type;
@@ -119,7 +138,7 @@ var app = new Vue({
 
       var direction = this.sort.direction;
       var on = this.sort.on;
-      var type = this.sort.type; //fixme implement search functions per type
+      var type = this.sort.type; 
 
       this.people.sort(function(a, b) {
         if (direction === "asc") {
@@ -132,7 +151,6 @@ var app = new Vue({
   },
   computed: {
     filteredData: function() {
-      //https://vuejs.org/examples/grid-component.html
       var filterKey = this.searchQuery && this.searchQuery.toLowerCase();
       var data = this.people;
       var cols = this.columns;
