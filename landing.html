@@ -5,7 +5,6 @@
 	<title>Lincoln Inc</title>
 	
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 
@@ -27,6 +26,10 @@
 	<div class="row">
 		<div id="sidebar" class="column">
 			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="dash.html#dashboard">DASHBOARD</a></li>
+				<li><a href="dash.html#projects">PROJECTS</a></li>
+				<li><a href="dash.html#artists">ARTISTS</a></li>
 				      <template v-for="template in templates">
         <button v-on:click="setTemplate(template.id)">{{ template.name }}</button>
       </template>
@@ -37,16 +40,10 @@
 			<div class="row grid-responsive">
 				<div class="column page-heading">
 					<div class="large-card">
-
-   
-					    <div class="login" id="login">
-
-					      <login></login>
-					        
-					    </div>
-
-   
-
+						<h1>Welcome to the Dashboard</h1>
+						<a class="anchor" name="dashboard"></a>
+						<img src="img/main.jpg">
+						<p class="text-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum odio quis nisi sollicitudin tempor. Suspendisse quis nulla at neque eleifend aliquet. Curabitur in efficitur ante, non hendrerit mauris. Etiam id dolor ac neque tempor finibus. Maecenas bibendum, quam vel tincidunt vehicula, orci leo scelerisque nibh, tempus pharetra diam magna at justo. Phasellus euismod tortor dapibus nulla fermentum, id pharetra metus tempor. Nam condimentum odio orci.</p>
 					</div>
 				</div>
 			</div>
@@ -74,7 +71,6 @@
 	<script src="js/application.js"></script>		
 	<script src="js/chart-data.js"></script>
 	<script src="js/chart.min.js"></script>
-	<script src="js/login.js"></script>
 	
 </body>
   

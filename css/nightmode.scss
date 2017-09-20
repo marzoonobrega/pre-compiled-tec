@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-  color: color-bright-light;
+  color: $color-bright-light;
 }
 
 h5 {
@@ -42,13 +42,17 @@ a:focus, a:hover {
   color: color-bright-light;
 }
 
+button{
+  background-color: $color-darkgrey-light;
+}
+
 
 hr {
   border-top: 0.1rem solid color-bright-light;
 }
 
 td, th {
-  border-bottom: 0.1rem solid var(--color-border-light);
+  border-bottom: 0.1rem solid $color-border-light;
 }
 
 .navbar {
@@ -61,7 +65,7 @@ td, th {
 
 
 .shadow{
-  box-shadow: var(--color-shadow-light);
+  box-shadow: $color-shadow-light;
 }
 
 #sidebar {
@@ -70,7 +74,7 @@ td, th {
 }
 
 #sidebar ul li a:hover {
-      color: color-bright-light;
+      color: $color-bright-light;
 }
 
 .large-card {
@@ -103,3 +107,14 @@ form input{
   border: none;
 }
 
+@media (min-width: 360px) and (max-width: 768px) {
+  button: $color-lightgrey-light;
+}
+
+form .btn{
+  background: $color-lightgrey-light;
+}
+
+form .boxin{
+  background: $color-lightgrey-light;
+}
